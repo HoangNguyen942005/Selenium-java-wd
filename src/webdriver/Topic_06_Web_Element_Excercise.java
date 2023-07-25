@@ -26,7 +26,6 @@ public class Topic_06_Web_Element_Excercise {
 	By biographyTextArea = By.cssSelector("#bio");
 	By developmentCheckbox = By.cssSelector("#development");
 	
-
 	@BeforeClass
 	public void beforeClass() {
 		if (osName.contains("Windows")) {
@@ -45,7 +44,7 @@ public class Topic_06_Web_Element_Excercise {
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		
 		//Textbox nhập vào text và in ra console
-		if(driver.findElement(emailTextbox).isDisplayed()){   //tìm emailTextbox, kiểm tra xem nó được hiển thị ko
+		if(driver.findElement(emailTextbox).isDisplayed()){   // tìm emailTextbox, kiểm tra xem nó được hiển thị ko
 		   driver.findElement(emailTextbox).sendKeys("Selenium WebDriver"); // được hiển thị thì nhập vào 1 senkeys
 		   System.out.println("Email textbox is displayed");   // sau đó in ra 
     }   else {   // nếu sai
@@ -84,7 +83,7 @@ public class Topic_06_Web_Element_Excercise {
 	public void TC_02_Enabled() {
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		
-		if (driver.findElement(passwordTextbox).isEnabled()) {  // tìm password textbox  xem có thể nhập dữ liệu không
+		if (driver.findElement(passwordTextbox).isEnabled()) {  // tìm password textbox xem có thể nhập dữ liệu không
 			System.out.println("Password textbox is enabled");  // nếu nhập được thì in ra dòng này
 			
 		} else {
@@ -113,7 +112,7 @@ public class Topic_06_Web_Element_Excercise {
 		
 		// Verify checkbox/ radio button are deselected
 		
-		Assert.assertFalse(driver.findElement(ageUnder18Radio).isSelected()); // nó trả về false nếu nó chưa được chọn (mặc định chua chọn)
+		Assert.assertFalse(driver.findElement(ageUnder18Radio).isSelected()); // nó trả về false nếu nó chưa được chọn (mặc định chưa chọn)
 		Assert.assertFalse(driver.findElement(developmentCheckbox).isSelected());
 		
 		// Click vào 2 element này
@@ -121,12 +120,10 @@ public class Topic_06_Web_Element_Excercise {
 		driver.findElement(ageUnder18Radio).click();
 		driver.findElement(developmentCheckbox).click();
 		
-		//Verify checkbox/ radio button are deselected
+		// Verify checkbox/ radio button are selected
 		
 		Assert.assertTrue(driver.findElement(ageUnder18Radio).isSelected()); // vì được chọn rồi nên sẽ là True
 		Assert.assertTrue(driver.findElement(developmentCheckbox).isSelected());
-		
-		
 		
 	}
 	
@@ -138,15 +135,15 @@ public class Topic_06_Web_Element_Excercise {
 		driver.findElement(By.id("email")).sendKeys("Hoang@gmail.com");
 	
 		By passwordTextbox = By.id("new_password");
-		By signupButton = By.cssSelector("#create-account-enabled");
+		//By signupButton = By.cssSelector("#create-account-enabled");
 		
 		driver.findElement(passwordTextbox).sendKeys("abc");
-		driver.findElement(signupButton).click();
+		//driver.findElement(signupButton).click();
 		sleepInSecond(3);
 		
 		//Verify lowercase
 		
-		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='lowercase-charcompleted']")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='lowercase-char completed']")).isDisplayed());
 		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='uppercase-char not-completed']")).isDisplayed());
 		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='number-char not-completed']")).isDisplayed());
 		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='special-char not-completed']")).isDisplayed());
@@ -154,7 +151,7 @@ public class Topic_06_Web_Element_Excercise {
 		
 		driver.findElement(passwordTextbox).clear();
 		driver.findElement(passwordTextbox).sendKeys("ABC");
-		driver.findElement(signupButton).click();
+		//driver.findElement(signupButton).click();
 		sleepInSecond(3);
 		
 		//Verify upcase
@@ -167,7 +164,7 @@ public class Topic_06_Web_Element_Excercise {
 		
 		driver.findElement(passwordTextbox).clear();
 		driver.findElement(passwordTextbox).sendKeys("123");
-		driver.findElement(signupButton).click();
+		//driver.findElement(signupButton).click();
 		sleepInSecond(3);
 		
 		// Verify Number
@@ -179,7 +176,7 @@ public class Topic_06_Web_Element_Excercise {
 		
 		driver.findElement(passwordTextbox).clear();
 		driver.findElement(passwordTextbox).sendKeys("!@#$");
-		driver.findElement(signupButton).click();
+		//driver.findElement(signupButton).click();
 		sleepInSecond(3);
 		
 		
@@ -192,11 +189,11 @@ public class Topic_06_Web_Element_Excercise {
 		
 		driver.findElement(passwordTextbox).clear();
 		driver.findElement(passwordTextbox).sendKeys("ABCDEFGH");
-		driver.findElement(signupButton).click();
+		//driver.findElement(signupButton).click();
 		sleepInSecond(3);
 		
 		
-		// Verify  charater >=8
+		// Verify charater >=8
 		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='lowercase-char not-completed']")).isDisplayed());
 		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='uppercase-char completed']")).isDisplayed());
 		Assert.assertTrue(driver.findElement(By.xpath("//li[@class='number-char not-completed']")).isDisplayed());
@@ -205,7 +202,7 @@ public class Topic_06_Web_Element_Excercise {
 			
 		driver.findElement(passwordTextbox).clear();
 		driver.findElement(passwordTextbox).sendKeys("abc123A!");
-		driver.findElement(signupButton).click();
+		//driver.findElement(signupButton).click();
 		sleepInSecond(3);
 		
 		//Verify full data 
@@ -215,14 +212,12 @@ public class Topic_06_Web_Element_Excercise {
 		Assert.assertFalse(driver.findElement(By.xpath("//li[@class='special-char completed']")).isDisplayed());
 		Assert.assertFalse(driver.findElement(By.xpath("//li[@class='8-char completed']")).isDisplayed());
 		
-		
 	}
 	
 	public void sleepInSecond(long timeInSecond) {
 		try {
 			Thread.sleep(timeInSecond*1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 	}

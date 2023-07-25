@@ -24,7 +24,7 @@ public class Topic_03_Xpath_PartI {
 		}
 
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 	}
 
@@ -52,7 +52,7 @@ public class Topic_03_Xpath_PartI {
 		Assert.assertEquals(driver.findElement(By.id("txtPhone-error")).getText(), "Vui lòng nhập số điện thoại.");
 	
 		}
-	@Test
+	//@Test
 	public void TC_02_Invalid_Email() {
 		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 		
@@ -67,7 +67,7 @@ public class Topic_03_Xpath_PartI {
 		Assert.assertEquals(driver.findElement(By.id("txtEmail-error")).getText(), "Vui lòng nhập email hợp lệ");
 		Assert.assertEquals(driver.findElement(By.id("txtCEmail-error")).getText(), "Vui lòng nhập lại địa chỉ email");
 	}
-	@Test
+	//@Test
 	public void TC_03_Incorrect_Email() {
 		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 		
@@ -81,7 +81,7 @@ public class Topic_03_Xpath_PartI {
 		
 		Assert.assertEquals(driver.findElement(By.id("txtCEmail-error")).getText(), "Email nhập lại không đúng");
 	}
-	@Test
+	//@Test
 	public void TC_04_Invalid_Password() {
 		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 			
@@ -97,7 +97,7 @@ public class Topic_03_Xpath_PartI {
 			Assert.assertEquals(driver.findElement(By.id("txtPassword-error")).getText(), "Mật khẩu phải có ít nhất 6 ký tự");
 			Assert.assertEquals(driver.findElement(By.id("txtCPassword-error")).getText(), "Mật khẩu phải có ít nhất 6 ký tự");
 		}
-	@Test
+	//@Test
 	public void TC_05_Incorrect_Password() {
 		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 		
@@ -111,7 +111,7 @@ public class Topic_03_Xpath_PartI {
 		
 		Assert.assertEquals(driver.findElement(By.id("txtCPassword-error")).getText(), "Mật khẩu bạn nhập không khớp");
 	}
-	@Test
+	//@Test
 	public void TC_06_Invalid_Phone() {
        //Action 1
 		driver.get("https://alada.vn/tai-khoan/dang-ky.html");

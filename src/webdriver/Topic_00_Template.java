@@ -37,7 +37,7 @@ public class Topic_00_Template {
 	// Giá trị của thuộc tính (Attribute value) : text, true, First name is required, FirstName, FirstName
 	@Test
 	public void TC_01_ID() {
-		// Muốn thao tác lên element thì đầu tiên phải tìm được element đó : findElêmnt
+		// Muốn thao tác lên element thì đầu tiên phải tìm được element đó : findElement
 		// find theo cái gì : id/ class/ name/ css/ xpath/...
 		// Find thấy element rồi thì action lên element đó : click/ senkey/...
 		

@@ -24,8 +24,7 @@ public class Topic_04_Run_On_Browser {
 		System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		
+	
 	}
 
 	@Test
@@ -63,26 +62,7 @@ public class Topic_04_Run_On_Browser {
 		driver.get("https://htmlreference.io/element/button/");
 		driver.quit();
 	}
-	@Test
-	public void TC_04() {
-		
-	}
-	@Test
-	public void TC_05() {
-		
-	}
-	@Test
-	public void TC_06() {
-		
-	}
-	@Test
-	public void TC_07() {
-		
-	}
-	@Test
-	public void TC_08() {
-		
-	}
+	
 	@AfterClass
 	public void afterClass() {
 		//driver.quit();
