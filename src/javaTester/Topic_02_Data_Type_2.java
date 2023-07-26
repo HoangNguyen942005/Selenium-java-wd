@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Topic_02_Data_Type_2 {
-    // Primitive type/ Value type : Kiểu dữ liệu nguyên thủy 
+    // Primitive type/ Value type : Kiểu dữ liệu nguyên thủy , không có phương thức đi kèm
 	
 	// Số nguyên : số không có phần thập phân
 	byte bNumber;
@@ -29,7 +29,7 @@ public class Topic_02_Data_Type_2 {
 	
 	boolean bStatus;  // **--> trả về True hoặc False 
 	
-	// Reference type : kiểu dữ liệu tham chiếu
+	// Reference type : kiểu dữ liệu tham chiếu, có phương thức đi làm
 	
 	// String : chuỗi
 	String address = "Ha Noi";
@@ -49,13 +49,11 @@ public class Topic_02_Data_Type_2 {
 	
 	// Collection
 	// List/ Set/ Queue/ Map
-	List<WebElement> homePageLinks = driver.findElements(By.cssSelector("")); // lưu trung được 
+	List<WebElement> homePageLinks = driver.findElements(By.cssSelector("")); // lưu trùng được 
 	Set<String> allWindows = driver.getWindowHandles();  // ko lưu trùng
 	List<String> productName = new ArrayList<String>();
 	
 	public static void main(String[] args) {
 	
-		
-		
 	}
 }
