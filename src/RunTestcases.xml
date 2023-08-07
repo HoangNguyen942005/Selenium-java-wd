@@ -14,21 +14,21 @@
    <test name="Run on FIREFOX">   
    <parameter name = "browser" value ="firefox"/>
     <classes>
-       <class name="testng.Topic_06_Parameter_Environment"/> <!-- chạy ở package testng.TopicXXX-->
+       <class name="javaTester.Topic_07_Switch_Case"/> <!-- chạy ở package testng.TopicXXX-->
     </classes>
   </test> 
   
   <test name="Run on CHROME">   
    <parameter name = "browser" value ="chrome"/>
     <classes>
-       <class name="testng.Topic_06_Parameter_Environment"/> 
+       <class name="javaTester.Topic_07_Switch_Case"/> 
     </classes>
   </test> 
   
   <test name="Run on EDGE">   
    <parameter name = "browser" value ="edge"/>
     <classes>
-       <class name="testng.Topic_06_Parameter_Environment"/> 
+       <class name="javaTester.Topic_07_Switch_Case"/> 
     </classes>
   </test> 
 </suite> 

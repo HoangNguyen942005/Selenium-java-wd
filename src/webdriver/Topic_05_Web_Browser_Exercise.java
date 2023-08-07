@@ -103,7 +103,7 @@ public class Topic_05_Web_Browser_Exercise {
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
 		sleepInSecond(2);
 	
-	//  Verify page HTML có chứa 1 chuỗi mong muốn, contains tìm kiếm chuỗi ký tự trong chuỗi này. đúng trả về True và ngược lại
+	    // Verify page HTML có chứa 1 chuỗi mong muốn, contains tìm kiếm chuỗi ký tự trong chuỗi này. đúng trả về True và ngược lại
 		Assert.assertTrue(driver.getPageSource().contains("Login or Create an Account "));
 		 
 		 // Click vào Create an Account	
