@@ -67,9 +67,7 @@ public class Topic_21_Wait_Element_Condition_Status {
 		// Có cơ chế tìm lại = 0.5s sẽ tìm lại 1 lần
 		// Nếu trong thời gian tìm lại mà thấy element thì thỏa mãn đk - Pass
 		// + Đánh fail testcase này tại step này + ko chạy step tiếp theo
-		// + Throw ra 1 ngoại lệ : NoSuchElementExeption
-		
-		
+		// + Throw ra 1 ngoại lệ : NoSuchElementExeption	
 	}
 
 	@Test
